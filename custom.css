@@ -1,0 +1,168 @@
+.formulaire{
+
+	
+	background-color: #FFF;
+}
+
+
+.formulaire h2 {
+
+	
+	background-color: #FFF;
+	font-size: 24px;
+	margin-left: 20px;
+	padding-top: 40px;
+	padding-bottom: 20px;
+
+}
+
+.formulaire form{
+
+	
+	margin-left: 100px;
+	margin-right: auto;
+	
+	margin-bottom: 30px;
+
+
+}
+
+
+.formulaire form input {
+
+    /*border-color: #808080 #C0C0C0 #C0C0C0 #D4D4D4;*/
+    border-style: solid;
+    border-width: 1px;
+    padding: 4px;
+    line-height: 18px;
+    font-size: 14px;
+    width: 400px;
+    float: none;
+    margin: 0;
+    background-color: #F7F7F7;
+    border-color: #CCC;
+    height:30px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+
+
+
+}
+
+.formulaire form label{
+    display: block;
+    margin-top: 10px;
+    color: #BBB;
+    font-size: 18px;
+
+    
+}
+
+
+.formulaire form textarea {
+    line-height: 16px;
+    font-size: 14px;
+    height: 100px;
+    background-color: #F7F7F7;
+    border:1px solid #999999;
+
+    
+
+}
+
+.formulaire form .boutton{
+
+     padding: 0px;
+     height: 30px;
+     width: 150px;
+ 
+     cursor: pointer;
+    
+     -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+     border-radius: .5em;
+    
+     
+     border: solid 3px #CCC;
+     background: #c1c1c1;
+     color: #5f5f5f;
+     position: right;
+     margin-left: 280px;
+
+
+    }
+.formulaire form select{
+
+     padding: 0px;
+     height: 30px;
+     width: 150px;
+    
+     -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+     border-radius: .5em;
+    
+     
+     border: solid 3px #CCC;
+     background: #c1c1c1;
+     color: #5f5f5f;
+     position: right;
+     margin-left: 280px;
+
+
+    }
+
+
+    .formulaire form .fichier{
+
+     padding: 0px;
+     height: 30px;
+    
+ 
+
+
+
+    }
+
+    .ecran{
+
+    		
+    	height: 400px;
+    	background-color: #FFF;
+
+    }
+
+    .video{
+
+    	margin-top: 20px;
+    	margin-left: 20px;
+    	width: 920px;
+    	height: 340px;
+    	background-color: #CCC;
+    }
+
+    .ecran .boutton2{
+
+     padding: 0px;
+     height: 30px;
+     width: 160px;
+ 
+     cursor: pointer;
+    
+     -webkit-border-radius: .5em;
+     -moz-border-radius: .5em;
+     border-radius: .5em;
+    
+     
+     border: solid 3px #CCC;
+     background: #c1c1c1;
+     color: #5f5f5f;
+     position: right;
+     margin-left: 400px;
+
+
+    }
+.fichier{
+
+	width: 160px;
+ 
+}
