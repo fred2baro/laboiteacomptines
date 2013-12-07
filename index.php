@@ -24,6 +24,7 @@ switch($app)
                 include("vues/v_recherche.php");
                 break;
             case 'confRecherche':
+                $list = getlist($_REQUEST['cat']);
                 include("vues/v_resultats.php");
                 break;
             case 'consulter':

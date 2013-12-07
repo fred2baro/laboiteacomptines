@@ -4,7 +4,7 @@
     </div></h1>
 <div id="vues"></div>
 
-<iframe frameborder="0" id="consultation" width="600" height="430" src="http://www.dailymotion.com/embed/video/<?php echo $_GET['idDly'];?>?logo=0&startscreen=html&html"></iframe><br />
+<iframe frameborder="0" id="consultation" width="600" height="430" src="http://www.dailymotion.com/embed/video/<?php echo $video['id_daily'];?>?logo=0&startscreen=html&html"></iframe><br />
 <article>
     <p id="auteur">
 
