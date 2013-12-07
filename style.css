@@ -382,3 +382,16 @@ footer p
 {
 	margin-left: 25%;
 }
+
+/************* Page d'ajout ****************************/
+.ajout_bannière
+{
+	background-image: url('images/ajout_banniere.jpg');
+	background-repeat: no-repeat;
+	width: 940px;
+	height: 400px;
+}
+#ajout
+{
+	width: 120px;
+}

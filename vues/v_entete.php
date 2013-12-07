@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://api.dmcdn.net/all.js"></script>
+
 		
 		<title>La boite à comptines</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="style.css" />
-			<link rel="stylesheet" href="custom.css" />
 	</head>
 
 	<body>
