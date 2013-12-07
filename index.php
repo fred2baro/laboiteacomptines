@@ -1,27 +1,85 @@
 <?php
-	session_start();
-	include("vues/v_entete.php");
-	if(!isset($_REQUEST['uc']))
-     $uc = 'accueil';
-	else
-	/**
-	* On donne a la variable $uc la valeur renvoyé par "v_bandeau.php"
-	*/
-	 $uc = $_REQUEST['uc'];
-	switch($uc)
-	/**
-	* On utilise la variable $uc dans un switch afin de gérer les différentes pages souhaitées
-	*/
-	{
-	case 'accueil':
-					include("vues/v_recherche.php");
-					break;
-	case 'rechercher': 
-					include("c_gestionRecherche.php");
-					break;
-	case 'publier' :
-					include("c_gestionPublication.php");
-					break;
-	}
-	include("vues/v_pied.php");
+include('lib/myDailymotion.php');
+
+if(!isset($_REQUEST['app']))
+    $app = 'web'; //Si l'application appeleante n'est pas identifiÃ©e, on considÃ¨re que l'appel vient du web
+else
+    $app = $_REQUEST['app'];
+
+switch($app)
+{
+    case 'web':
+        // Dans le cas ou l'application appelÃ© est un navigateur web
+        include("vues/v_entete.php");
+
+        if(!isset($_REQUEST['action']))
+            $action = 'afficher';
+        else
+            $action = $_REQUEST['action'];
+
+        switch($action)
+        {
+            case 'afficher':
+                require_once 'lib/myDailymotion.php';
+                $propositions = getpropositions(3);
+                include("vues/v_recherche.php");
+                break;
+            case 'confRecherche':
+                include("vues/v_resultats.php");
+                break;
+            case 'consulter':
+                include("vues/v_consultation.php");
+                break;
+            case 'contact':
+                include("vues/v_contact.php");
+                break;
+            case 'ajout':
+                include("vues/v_ajout.php");
+                break;
+            default :
+                echo('404 - not found');
+                break;
+        }
+
+        include("vues/v_pied.php");
+        break;
+
+
+
+    case 'mobile':
+        // Cas ou l'application  appelante est une appli mobile
+        if(!isset($_REQUEST['action']))
+            $action = 'afficher';
+        else
+            $action = $_REQUEST['action'];
+
+        switch($action)
+        {
+            case 'afficher':
+                require_once 'lib/myDailymotion.php';
+                echo(json_encode(getpropositions(3)));
+                break;
+            case 'confRecherche':
+                include("vues/v_resultats.php");
+                break;
+            case 'consulter':
+                include("vues/v_consultation.php");
+                break;
+            case 'contact':
+                include("vues/v_contact.php");
+                break;
+            case 'ajout':
+                include("vues/v_ajout.php");
+                break;
+            default :
+                echo('404 - not found');
+                break;
+        }
+        break;
+
+    default:
+        echo('Undefined application');
+        break;
+}
+
 ?>

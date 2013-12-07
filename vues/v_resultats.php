@@ -22,10 +22,10 @@ function infos(val){
 }
 </script>
   <?php
-$key = $_POST["keyword"];
+//$key = $_POST["keyword"];
 $cat = $_GET["cat"];
 //echo "Post : ".$cat;
-echo "<input type='hidden' id='test' value='$key'/>";
+//echo "<input type='hidden' id='test' value='$key'/>";
 echo "<input type='hidden' id='categorie' value='$cat'/>";
 
 
