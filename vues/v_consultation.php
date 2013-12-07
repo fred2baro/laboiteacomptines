@@ -60,7 +60,7 @@ function bonus(val){
 			<hr>
 			<form>
 				<label>Commentaires</label>
-					<p>
+				
 			 <div id="disqus_thread"></div>
 						<script type="text/javascript">
 								/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -76,7 +76,6 @@ function bonus(val){
 						<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     
-					</p>
 			</form>
 			<p><div id="description">
 				<!--ceci sont les commentaires deja posté -->
