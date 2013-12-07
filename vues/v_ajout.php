@@ -1,60 +1,58 @@
-<?php
+<!--Bloc de description de la page d'ajout-->
+		<article class="ajout_bannière">
 
-include("lib/bdd.php");
-
-?>		
-
-
-
-<div class="ajout_bannière">
-
-	<p id="texte_ajout">Créer votre propre comptine et mettez la en ligne sur notre site</p>
-	
-</div>
-		
-		
-		<form method="POST" action="upload/upload.php" enctype="multipart/form-data">
+			<p id="texte_ajout">Créer votre propre comptine et mettez la en ligne sur notre site !</p>
 			
-			<label>Titre : </label>
-				<p>
-					<input type="text" name="titre" id="titre" />
-				</p>
+		</article>
+		
+<!--Fin du bandeau de description-->		
+
+
+
+<!--Bloc du formulaire pour upload une vidéo-->
+		
+			
+			<form method="POST" action="upload/upload.php" enctype="multipart/form-data">
+				
+				<div id="ajout_input">
+				
+					<label >Titre : </label>
+						<p>
+							<input type="text" name="titre" id="titre" class="input"/>
+						</p>
+							
+					<label>Auteur : </label>
+						<p>
+							<input type="text" name="titre" id="titre" class="input"/>
+						</p>
 					
-			<label>Auteur : </label>
-				<p>
-					<input type="text" name="titre" id="titre" />
-				</p>
-			
-			<label>Type : </label>
-				<p>
-					<select name="categorie">sélectionnez une catégorie</select>
-				</p>
-						
-			<label for='Video'>Ajouter une video</label>
-				<p>
-					<input class="fichier"type="file" name="video"  />
-				</p>
+					<label>Type : </label>
+						<p>
+							<select name="categorie" class="input">sélectionnez une catégorie</select>
+						</p>
+								
+					<label for='Video' id="vidéo">Ajouter une video</label>
+						<p>
+							<input class="fichier" type="file" name="video" id="fichier"/>
+						</p>
 				
-			<label>Ajouter les paroles : </label>
-				<p>
-					<textarea rows="2" cols="50" name="paroles" ></textarea>
-				</p>
-
-			
-	<?php 
-	$sql = 'SELECT cate_title FROM categories'; 
-	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
-	while($data = mysql_fetch_assoc($req)) 
-	    { 
-	    echo '<option>'.$data['cate_title'].'</option>';
-	    }
-	mysql_close(); 
-	?> 
-     </select>
-				</p>
+				</div>
 				
-				<p>
+				
+				<div id="ajout_parole">
+					
+					<label>Ajouter les paroles : </label>
+						<p>
+							<textarea rows="2" cols="50" name="paroles" ></textarea>
+						</p>
+				
+				</div>	
+				
+						<p>
+							<input class="boutton" type="submit" value="Publier"/>
+						</p>
+				
+				
+			</form>
 
-					<input class="boutton" type="submit" value="Publier"/>
-				</p>
-		</form>
+<!--Fin du bloc de formulaire-->

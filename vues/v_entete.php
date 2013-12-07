@@ -6,6 +6,7 @@
 		<title>La boite à comptines</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="style.css" />
+			<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 	</head>
 
 	<body>
