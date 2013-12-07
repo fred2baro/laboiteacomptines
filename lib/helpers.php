@@ -92,6 +92,10 @@ function getlist($tag)
     $result = array();
     while ($video = mysql_fetch_array($reponse, MYSQL_ASSOC))
     {
+		$thumbnail = $api->get('/videos', array(
+				'fields' => 'id,thumbnail_120_url',
+				'ids' => $video['id_daily'],
+			));
         $result[$video['vide_id']] = array(
             'id_daily' => $video['id_daily'],
             'vide_name' => $video['vide_name'],
@@ -99,7 +103,7 @@ function getlist($tag)
             'vide_paroles' => $video['vide_paroles'],
             'vide_created_by' => $video['vide_created_by'],
             'vide_created_at' => substr($video['vide_created_at'],0,10),
-            'thumbnail_120_url' => $api->get('/videos', array('fields' => 'id,thumbnail_120_url', 'ids' => $video['id_daily']))['list']['0']['thumbnail_120_url']
+            'thumbnail_120_url' => $thumbnail['list']['0']['thumbnail_120_url'],
         );
     }
 

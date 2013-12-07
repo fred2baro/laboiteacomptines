@@ -6,26 +6,33 @@ include("lib/bdd.php");
 
 
 
-<div class="formulaire">
+<div class="ajout_bannière">
 
-	<h2>Ajoutez vos comptines</h2>
-		<form method="POST" action="upload/upload.php" enctype="multipart/form-data"">	
-		
+	<p id="texte_ajout">Créer votre propre comptine et mettez la en ligne sur notre site</p>
 	
+</div>
+		
+		
+		<form method="POST" action="upload/upload.php" enctype="multipart/form-data">
+			
+			<label>Titre : </label>
+				<p>
+					<input type="text" name="titre" id="titre" />
+				</p>
+					
+			<label>Auteur : </label>
+				<p>
+					<input type="text" name="titre" id="titre" />
+				</p>
+			
+			<label>Type : </label>
+				<p>
+					<select name="categorie">sélectionnez une catégorie</select>
+				</p>
+						
 			<label for='Video'>Ajouter une video</label>
-				
 				<p>
 					<input class="fichier"type="file" name="video"  />
-				</p>
-				
-			<label>Nom de l'auteur :</label>
-				<p>
-					<input type="text" name="titre" id="titre" />
-				</p>
-
-			<label>Titre de la comptine : </label>
-				<p>
-					<input type="text" name="titre" id="titre" />
 				</p>
 				
 			<label>Ajouter les paroles : </label>
@@ -33,9 +40,7 @@ include("lib/bdd.php");
 					<textarea rows="2" cols="50" name="paroles" ></textarea>
 				</p>
 
-			<label>Choisissez la categorie</label>
-				<p>
-					<select name="categorie">
+			
 	<?php 
 	$sql = 'SELECT cate_title FROM categories'; 
 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error()); 
@@ -53,4 +58,3 @@ include("lib/bdd.php");
 					<input class="boutton" type="submit" value="Publier"/>
 				</p>
 		</form>
-		</div>
