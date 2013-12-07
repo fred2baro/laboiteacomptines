@@ -36,10 +36,15 @@ switch($app)
                 include("vues/v_contact.php");
                 break;
             case 'ajout':
+                $categories = getcategories();
                 include("vues/v_ajout.php");
                 break;
             case 'categories':
                 include("vues/v_categories.php");
+                break;
+            case 'addMovie':
+                $added = addMovie();
+                include("vues/v_recherche.php");
                 break;
             default :
                 echo('404 - not found');

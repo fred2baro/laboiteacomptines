@@ -131,4 +131,87 @@ function incrementerLeNombreDeVues($id)
     return $reponse;
 }
 
+
+function getcategories()
+{
+    $config = config();
+
+    // Connexion base de données
+    $link = mysql_connect($config['db']['server'], $config['db']['username'], $config['db']['password'])
+    or die("Impossible de se connecter : " . mysql_error());
+    $db_selected = mysql_select_db($config['db']['name'], $link);
+    if (!$db_selected) {
+        die ('Impossible de sélectionner la base de données : ' . mysql_error());
+    }
+
+    $sql = "SELECT * from categories";
+    $reponse = mysql_query($sql);
+
+
+    //Transformation du resultat de la requete en tableau
+    // et récupérationdes données de Dailymotion
+    $result = array();
+    while ($category = mysql_fetch_array($reponse, MYSQL_ASSOC))
+    {
+        $result[$category['cate_id']] = array(
+            'cate_title' => $category['cate_title'],
+            'cate_description' => $category['cate_description'],
+        );
+    }
+
+    return $result;
+}
+
+
+function addMovie()
+{
+    $config = config();
+    $movedfile = 'upload/'.time().'.avi';
+    move_uploaded_file($_FILES['video']['tmp_name'], $movedfile);
+
+    //----- Dailymotion object instanciation -----//
+    $api = new Dailymotion();
+    $api->setGrantType(
+        Dailymotion::GRANT_TYPE_PASSWORD,
+        $config['dailymotion']['apiKey'],
+        $config['dailymotion']['apiSecret'],
+        $scope = array('manage_videos'),
+        array(
+            'username' => $config['dailymotion']['user'],
+            'password' => $config['dailymotion']['password']
+        )
+    );
+
+    // Connexion base de données
+    $link = mysql_connect($config['db']['server'], $config['db']['username'], $config['db']['password'])
+    or die("Impossible de se connecter : " . mysql_error());
+    $db_selected = mysql_select_db($config['db']['name'], $link);
+    if (!$db_selected) {
+        die ('Impossible de sélectionner la base de données : ' . mysql_error());
+    }
+
+    // Ajout à Dailymotion
+    $url = $api->uploadFile($movedfile);
+    $result = $api->post(
+        '/videos',
+        array('fields' => 'id,url',
+            'tags' => $_POST['categorie'],
+            'url'     => $url,
+            'title'     => $_POST['titre'],
+            'published' => true,
+            'private'   => false,
+            'channel'   => 'kids')
+    );
+
+
+    //Ajout en BD
+    $sql = 'INSERT INTO videos (vide_id, vide_name, vide_url, vide_url_dailymotion, vide_nbvue, vide_rate, vide_published, vide_description, vide_paroles, vide_virtual_name, vide_created_by, vide_created_at, vide_updated_at, id_daily,vide_tag) VALUES (NULL, \''.$_POST['titre'].'\', \'index.php?uc=rechercher&action=consulter&idDly='.$result['id'].'\', \''.$result['url'].'\', \'0\', \'0\', \'1\', \'\', \''.$_POST['paroles'].'\', \'\', \''.$_POST['auteur'].'\', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, \''.$result['id'].'\',\''.$_POST['categorie'].'\')';
+    $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+    mysql_close();
+
+
+    return 1;
+
+}
+
 ?>
