@@ -55,6 +55,11 @@ table {
          url('polices/Walkway Oblique Bold.svg#BallparkWeiner') format('svg');
 }
 /*Affichage des élements de page*/
+#bloc_page
+{
+	margin: auto;
+	width: 70%;
+}
 h1
 {
 	font-size: 1.5em;
@@ -87,12 +92,7 @@ em
 /*Balises sectionnantes*/
 body
 {
-	background-color: rgb(229, 229, 229);
-}
-section
-{
-	width: 1000px;
-	margin: 0px auto;
+	
 }
 article
 {
@@ -104,25 +104,18 @@ article
 /*Entête*/
 header
 {
-	background-color: #f9bb01;
 	position: relative;
 }
 header img, nav
 {
 	display: inline-block;
-	vertical-align: bottom;
+	text-align: center;
 }
-#contenaire
+header img
 {
-	width: 1000px;
 	margin: auto;
 }
 /*Menu de navigation*/
-nav
-{
-	margin-left: 120px;
-	margin-bottom: 10px;
-}
 nav li
 {
 	display: inline-block;

@@ -6,5 +6,6 @@
 				Leila Mousstamine, Geoffrey Nguyen, Gregory Peigne.
 		</p>
 	</footer>
+	</div>
 	</body>
 </html>
