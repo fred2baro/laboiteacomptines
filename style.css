@@ -76,7 +76,6 @@ h1
 }
 p
 {
-	font-family: 'helvetica', Serif;
 	color: #404040;
 	margin: 0px;
 }
@@ -389,9 +388,69 @@ footer p
 	background-image: url('images/ajout_banniere.jpg');
 	background-repeat: no-repeat;
 	width: 940px;
-	height: 400px;
+	height: 300px;
+	margin: 0px;
 }
-#ajout
+#texte_ajout
 {
-	width: 120px;
+	width: 240px;
+	font-family: 'Cookie', cursive;
+	font-size: 35px;
+	color: #ED1E79;
+	margin-left: 30px;
+	padding-top: 30px;
+}
+label, form p
+{
+	display: inline-block;
+}
+form
+{
+	background-color:#F4E8D9;
+}
+#ajout_input
+{
+	display: inline-block;
+	width: 380px;
+	height: 300px;
+	border: 3px solid black;
+	vertical-align: top;
+	margin: 30px 40px;
+	position : relative;
+}
+.input
+{
+	width: 280px;
+	height: 40px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px 0px;
+	background-color: white;
+}
+label
+{
+	display: inline-block;
+	width: 80px;
+	margin-top: 10px;
+}
+#vidéo
+{
+	width: 140px;
+}
+#ajout_parole
+{
+	display: inline-block;
+	width:	380px;
+	height: 300px;
+	border: 3px solid black;
+	vertical-align: top;
+	margin: 30px 40px;
+}
+#fichier
+{
+	width: 220px;
+	background-color: #6F5F99;
+	border-radius: 20px;
+	height: 40px;
+	padding: auto;
 }
