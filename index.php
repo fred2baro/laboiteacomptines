@@ -1,5 +1,5 @@
 <?php
-include('lib/myDailymotion.php');
+include('lib/helpers.php');
 
 if(!isset($_REQUEST['app']))
     $app = 'web'; //Si l'application appeleante n'est pas identifiée, on considère que l'appel vient du web
@@ -20,7 +20,6 @@ switch($app)
         switch($action)
         {
             case 'afficher':
-                require_once 'lib/myDailymotion.php';
                 $propositions = getpropositions(3);
                 include("vues/v_recherche.php");
                 break;
@@ -28,6 +27,7 @@ switch($app)
                 include("vues/v_resultats.php");
                 break;
             case 'consulter':
+                $video = getvideo($_REQUEST['idDly']);
                 include("vues/v_consultation.php");
                 break;
             case 'contact':
@@ -35,6 +35,9 @@ switch($app)
                 break;
             case 'ajout':
                 include("vues/v_ajout.php");
+                break;
+            case 'categories':
+                include("vues/v_categories.php");
                 break;
             default :
                 echo('404 - not found');
