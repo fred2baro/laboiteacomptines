@@ -1,8 +1,8 @@
 <!--Formulaire de recherche-->
 		<div id="banniere_image">
 			<div id="banniere_recherche">
-				<form method="POST" action="index.php?uc=rechercher&action=confRecherche" id="target">
-                                <input type="text" value="" name="keyword" id="keyword">
+				<form method="POST" action="index.php?action=confRecherche" id="target">
+                                <input type="text" value="" name="cat" id="keyword">
                                 <input type="submit" value="Rechercher" id="submit">
                             </form>
 			</div>

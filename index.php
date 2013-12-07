@@ -29,6 +29,7 @@ switch($app)
                 break;
             case 'consulter':
                 $video = getvideo($_REQUEST['idDly']);
+                incrementerLeNombreDeVues($video['vide_id']);
                 include("vues/v_consultation.php");
                 break;
             case 'contact':

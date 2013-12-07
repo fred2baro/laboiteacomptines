@@ -37,24 +37,6 @@ function getpropositions($nb_propositions)
 }
 
 
-//function getcategories()
-//{
-//    $config = config();
-//
-//    // Connexion base de données
-//    $link = mysql_connect($config['db']['server'], $config['db']['username'], $config['db']['password'])
-//    or die("Impossible de se connecter : " . mysql_error());
-//    $db_selected = mysql_select_db($config['db']['table'], $link);
-//    mysql_query("SET NAMES 'utf8'");
-//    if (!$db_selected) {
-//        die ('Impossible de sélectionner la base de données : ' . mysql_error());
-//    }
-//
-//
-//
-//}
-
-
 function getvideo($id)
 {
     $config = config();
@@ -122,6 +104,27 @@ function getlist($tag)
     }
 
     return $result;
+}
+
+
+function incrementerLeNombreDeVues($id)
+{
+    $config = config();
+
+    // Connexion base de données
+    $link = mysql_connect($config['db']['server'], $config['db']['username'], $config['db']['password'])
+    or die("Impossible de se connecter : " . mysql_error());
+    $db_selected = mysql_select_db($config['db']['name'], $link);
+    mysql_query("SET NAMES 'utf8'");
+    if (!$db_selected) {
+        die ('Impossible de sélectionner la base de données : ' . mysql_error());
+    }
+
+    $sql = "UPDATE videos set vide_nbvue = vide_nbvue + 1 WHERE vide_id = '".$id."'";
+    $reponse = mysql_query($sql);
+
+
+    return $reponse;
 }
 
 ?>
