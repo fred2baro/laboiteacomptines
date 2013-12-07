@@ -15,18 +15,18 @@
 				<!--Bandeau d'entête de page-->
 			<header>
 				
-				<nav class='header left'>
+				<nav class='header_left'>
 					<ul>
-						<li><a href="index.php?action=afficher">ajouter une comptine</a></li>			
+						<li id="nav_ajouter"><a href="index.php?action=afficher">ajouter une comptine</a></li>			
 					</ul>
 				</nav>
 				
 				<a href="index.php"><img src="images/logo.png" alt="Logo" class='logo'/></a>
 				
-				<nav class='header right'>
+				<nav class='header_right'>
 					<ul>
-						<li><a href="index.php?action=contact">Contact</a></li>			
-						<li><a href="#">?</a></li>			
+						<li id="nav_contact"><a href="index.php?action=contact">contact</a></li>			
+						<li id="question"><a href="#">?</a></li>			
 					</ul>
 				</nav>
 				

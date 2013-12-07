@@ -54,11 +54,20 @@ table {
          url('polices/Walkway Oblique Bold.ttf') format('truetype'),
          url('polices/Walkway Oblique Bold.svg#BallparkWeiner') format('svg');
 }
+@font-face
+{
+    font-family: 'Varela round'
+    src: url('polices/Varela round.eot');
+    src: url('polices/Varela round.eot?#iefix') format('embedded-opentype'),
+         url('polices/Varela round.woff') format('woff'),
+         url('polices/Varela round.ttf') format('truetype'),
+         url('polices/Varela round.svg#BallparkWeiner') format('svg');
+}
 /*Affichage des élements de page*/
 #bloc_page
 {
 	margin: auto;
-	width: 70%;
+	width: 940px;
 }
 h1
 {
@@ -74,7 +83,7 @@ p
 a
 {
 	text-decoration: none;
-	font-family: 'helvetica', Serif;
+	font-family: 'Varela round', Serif;
 }
 strong
 {
@@ -105,38 +114,55 @@ article
 header
 {
 	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	height: 120px;
+	width: 100%;
 }
 header img, nav
 {
 	display: inline-block;
-	text-align: center;
+	vertical-align: middle;
 }
 header img
 {
-	margin: auto;
+	position: relative;
+	z-index: 2;
 }
 /*Menu de navigation*/
 nav li
 {
 	display: inline-block;
-	font-family: 'helvetica', Serif;
-	margin-left: 50px;	
+	font-family: 'Varela round', Serif;
+	border-radius: 20px;
+	height: 20px;
+	background-color: #F4E8D9;
+	margin-bottom: 80px;
+	padding: 10px 0px;
+}
+#nav_ajouter
+{
+	width: 200px;
+	margin-right: 80px;
+}
+#nav_contact
+{
+	width: 130px;
+	margin-left: 80px;
+}
+#question
+{
+	width: 40px;
+	margin-left: 20px;
 }
 nav a
 {
-	color: black;
+	color: #6F5F99;
+	font-size: 16px;
 }
-nav a:hover
+nav li:hover
 {
-	text-decoration: underline;
-}
-a:visited
-{
-	color:black;
-}
-nav ul
-{
-	font-size: 1.6em;
+	background-color: #EADBCC;
 }
 /*Fin de l'entête*/
 
@@ -149,6 +175,7 @@ nav ul
 	background-repeat: no-repeat;
 	position: relative;
 	width: 100%;
+	z-index: 1;
 }
 #banniere_recherche
 {
