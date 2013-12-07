@@ -338,16 +338,21 @@ article textarea
 /**********************************************Pied de page******************************************/
 footer
 {
-	background-color: #b7b7b7;
+	background-color: rgba(204,204,204,0.8);
 	padding: 30px;
 	margin-top: 80px;
 }
 footer p
 {
+	color: rgba(153,153,153,0.8);
 	font-size: 1em;
 	width: 900px;
 	margin: auto;
 	text-align: center;
+}
+footer a
+{
+	color: rgba(153,153,153,0.8);
 }
 #auteur,.bonus
 {
@@ -432,6 +437,9 @@ label
 	display: inline-block;
 	width: 80px;
 	margin-top: 10px;
+	color:#6F5F99;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 16px;
 }
 #vidéo
 {
