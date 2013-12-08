@@ -28,7 +28,8 @@
 					
 					<label>Type : </label>
 						<p>
-							<select name="categorie" class="input">sélectionnez une catégorie
+							<select name="categorie" class="input">
+                                <option>sélectionnez une catégorie</option>
                                 <?php
                                 foreach ($categories as $cat)
                                 {

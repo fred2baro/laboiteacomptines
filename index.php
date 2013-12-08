@@ -66,7 +66,6 @@ switch($app)
         switch($action)
         {
             case 'afficher':
-                require_once 'lib/myDailymotion.php';
                 echo(json_encode(getpropositions(3)));
                 break;
             case 'confRecherche':

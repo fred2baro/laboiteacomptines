@@ -68,6 +68,7 @@ function getlist($tag)
     if (!$db_selected) {
         die ('Impossible de sélectionner la base de données : ' . mysql_error());
     }
+    mysql_query("SET NAMES 'utf8'");
 
     $sql = "SELECT * from videos WHERE vide_tag LIKE '%".$tag."%'";
     $reponse = mysql_query($sql);
@@ -205,7 +206,7 @@ function addMovie()
 
 
     //Ajout en BD
-    $sql = 'INSERT INTO videos (vide_id, vide_name, vide_url, vide_url_dailymotion, vide_nbvue, vide_rate, vide_published, vide_description, vide_paroles, vide_virtual_name, vide_created_by, vide_created_at, vide_updated_at, id_daily,vide_tag) VALUES (NULL, \''.$_POST['titre'].'\', \'index.php?uc=rechercher&action=consulter&idDly='.$result['id'].'\', \''.$result['url'].'\', \'0\', \'0\', \'1\', \'\', \''.$_POST['paroles'].'\', \'\', \''.$_POST['auteur'].'\', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, \''.$result['id'].'\',\''.$_POST['categorie'].'\')';
+    $sql = 'INSERT INTO videos (vide_id, vide_name, vide_url, vide_url_dailymotion, vide_nbvue, vide_rate, vide_published, vide_description, vide_paroles, vide_virtual_name, vide_created_by, vide_created_at, vide_updated_at, id_daily,vide_tag) VALUES (NULL, \''.$_POST['titre'].'\', \'index.php?uc=rechercher&action=consulter&idDly='.$result['id'].'\', \''.$result['url'].'\', \'0\', \'0\', \'1\', \'\', "'.$_POST['paroles'].'", \'\', \''.$_POST['auteur'].'\', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, \''.$result['id'].'\',\''.$_POST['categorie'].'\')';
     $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
     mysql_close();
 

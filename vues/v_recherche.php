@@ -14,7 +14,7 @@
 </p>
 
 <ul id="categories">
-    <li><a href="index.php?action=confRecherche&cat=classiques" title="Grands classiques"><img src="images/8.jpg" alt="" /></a></li>
+    <li><a href="index.php?action=confRecherche&cat=classique" title="Grands classiques"><img src="images/8.jpg" alt="" /></a></li>
     <li><a href="index.php?action=confRecherche&cat=corps"	title="Découvrir le corps"><img src="images/7.jpg" alt="" /></a></li>
     <li><a href="index.php?action=confRecherche&cat=main" title="La main et ses 5 doigts"><img src="images/5.jpg" alt=""/></a></li>
     <li><a href="index.php?action=confRecherche&cat=gym" title="Un peu de gymnastique"><img src="images/01.jpg" alt=""/></a></li>
