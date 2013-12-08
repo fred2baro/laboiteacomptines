@@ -49,7 +49,7 @@
 						
 						<p>
 							<div id="ajout_fichier">
-								<input class="fichier" type="file" name="video" id="fichier"/>
+								<input class="fichier" type="file" capture="camera" accept="video/*" name="video" id="fichier"/>
 								<h3>choissez un fichier</h3>
 							</div>
 						</p>
