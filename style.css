@@ -200,15 +200,13 @@ nav li:hover
 /*Image des catégories disponibles*/
 #categories
 {
-	width: 95%;
+	width: 80%;
 	vertical-align: top;
 	margin: auto;
 }
 #categories li
 {
 	display: inline-block;
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 #categories a
 {
@@ -248,10 +246,9 @@ nav li:hover
 {
 	display: inline-block;
 	width: 250px;
-	margin: 15px;
 	vertical-align: top;
-	background-color: white;
-	padding: 20px;
+	margin:17px;
+	padding-bottom:20px;
 	height: 200px;
 }
 .suggestion a
@@ -496,7 +493,7 @@ textarea
 #button
 {
 	width: 380px;
-	background-color: red;
+	background-color: #ED1E79;
 	border-radius: 20px;
 	height:40px;
 	margin-left: 300px;
@@ -504,6 +501,10 @@ textarea
 	color: white;
 	font-family: 'Varela round', Sans Serif;
 	font-size: 16px;
+}
+#button:hover
+{
+	background-color:#CE006C;
 }
 #ajout_button
 {
@@ -533,14 +534,16 @@ aside,#video_suggestion
 aside
 {
 	width:280px;
-	height:600px;
+	height:490px;
 	background-color:#F4E8D9;
 	margin-left:30px;
+	padding:0px;
 }
 #video_suggestion
 {
-	width:600px;
-	margin-left:20px;
+	width:569px;
+	height:530px;
+	margin-left:43px;
 }
 aside h2
 {
@@ -552,11 +555,7 @@ aside h2
 	text-align:center;
 	padding:15px;
 }
-#categories li
-{
-	display:inline-block;
-	margin-top:20px;
-}
+
 aside p
 {
 	font-family:'cookie',cursive;
@@ -564,7 +563,7 @@ aside p
 	font-weight:bold;
 	color:#9E005D;
 	text-align:center;
-	margin-top:40px;
+	margin-top:25px;
 }
 #titre_comptine
 {
@@ -584,3 +583,8 @@ article label
 {
 	width:200px;
 }
+article h1
+{
+	text-align:center;
+}
+

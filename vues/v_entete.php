@@ -17,7 +17,7 @@
 				
 				<nav class='header_left'>
 					<ul>
-						<li id="nav_ajouter"><a href="index.php?action=ajout">ajouter une comptine</a></li>			
+						<a href="index.php?action=ajout"><li id="nav_ajouter">ajouter une comptine</li></a>			
 					</ul>
 				</nav>
 				
@@ -25,8 +25,8 @@
 				
 				<nav class='header_right'>
 					<ul>
-						<li id="nav_contact"><a href="index.php?action=contact">contact</a></li>			
-						<li id="question"><a href="#">?</a></li>			
+						<a href="index.php?action=contact"><li id="nav_contact">contact</li></a>			
+						<a href="#"><li id="question">?</li></a>			
 					</ul>
 				</nav>
 				
