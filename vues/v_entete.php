@@ -25,7 +25,7 @@
 				
 				<nav class='header_right'>
 					<ul>
-						<a href="index.php?action=contact"><li id="nav_contact">contact</li></a>			
+						<a href="mailto:contact@laboiteacomptines.fr"><li id="nav_contact">contact</li></a>			
 						<a href="#"><li id="question">?</li></a>			
 					</ul>
 				</nav>
