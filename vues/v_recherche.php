@@ -39,15 +39,14 @@
 	
 <?php
 
-
-foreach ($propositions['list'] as $video)
+foreach ($propositions as $video)
 {
     echo '<div class="suggestion">';
-    echo '<a href="index.php?action=consulter&idDly='.$video['id'].'">';
-    echo '<img width="250" height="150" src="'.$video['thumbnail_url'].'"></img>';
+    echo '<a href="index.php?action=consulter&idDly='.$video['id_daily'].'">';
+    echo '<img width="250" height="150" src="'.$video['thumbnail_120_url'].'"></img>';
     echo '<p>';
 
-    echo $video['title'].' par auteur';
+    echo $video['vide_name'].' par '.$video['vide_created_by'];
     echo '</p>';
     echo '</a></div>';
 }

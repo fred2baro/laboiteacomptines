@@ -20,7 +20,7 @@ switch($app)
         switch($action)
         {
             case 'afficher':
-                $propositions = getpropositions(3);
+                $propositions = getpropositions(4);
                 include("vues/v_recherche.php");
                 break;
             case 'confRecherche':
