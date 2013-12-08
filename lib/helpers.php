@@ -97,7 +97,7 @@ function getlist($tag)
     }
     mysql_query("SET NAMES 'utf8'");
 
-    $sql = "SELECT * from videos WHERE vide_tag LIKE '%".$tag."%'";
+    $sql = "SELECT * from videos WHERE vide_tag LIKE '%".$tag."%' ORDER BY vide_nbvue DESC";
     $reponse = mysql_query($sql);
 
 
