@@ -12,7 +12,7 @@
 <!--Bloc du formulaire pour upload une vidéo-->
 		
 			
-			<form method="POST" action="index.php?action=addMovie" enctype="multipart/form-data">
+			<form id="ajout_form" method="POST" action="index.php?action=addMovie" enctype="multipart/form-data">
 				
 				<div id="ajout_input">
 				
