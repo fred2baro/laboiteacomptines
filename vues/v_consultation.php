@@ -1,3 +1,6 @@
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <iframe frameborder="0" id="consultation" width="600" height="430" src="http://www.dailymotion.com/embed/video/<?php echo $video['id_daily'];?>?logo=0&startscreen=html&html"></iframe><br />
 <article>
 	

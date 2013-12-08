@@ -1,4 +1,7 @@
-﻿<h1>Vos comptines</h1>
+﻿<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
+<h1>Vos comptines</h1>
 <script>
 function infos(val){
 	var auteur;
