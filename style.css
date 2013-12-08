@@ -412,30 +412,35 @@ label, form p
 form
 {
 	background-color:#F4E8D9;
+	height:400px;
 }
 #ajout_input
 {
 	display: inline-block;
 	width: 380px;
-	height: 300px;
-	border: 3px solid black;
+	height: 280px;
 	vertical-align: top;
-	margin: 30px 40px;
+	margin: 20px 40px 0px;
 	position : relative;
 }
 .input
 {
-	width: 280px;
+	width: 240px;
 	height: 40px;
 	border: none;
 	border-radius: 20px;
 	margin: 10px 0px;
 	background-color: white;
+	padding: 0px 20px;
+}
+#type
+{
+	width: 280px;
 }
 label
 {
 	display: inline-block;
-	width: 80px;
+	width:90px;
 	margin-top: 10px;
 	color:#6F5F99;
 	font-family: 'Varela Round', sans-serif;
@@ -443,22 +448,84 @@ label
 }
 #vidéo
 {
-	width: 140px;
+	width: 150px;
+	vertical-align: top;
+	margin-top: 20px;
 }
 #ajout_parole
 {
 	display: inline-block;
 	width:	380px;
-	height: 300px;
-	border: 3px solid black;
+	height: 280px;
 	vertical-align: top;
-	margin: 30px 40px;
+	margin: 30px 40px 0px;
 }
-#fichier
+#ajout_fichier
 {
 	width: 220px;
 	background-color: #6F5F99;
 	border-radius: 20px;
 	height: 40px;
-	padding: auto;
+	display: inline-block;
+	margin-top: 10px;
+}
+#fichier
+{
+	opacity: 0;
+	position: relative;
+	display: block;
+	left: -1px;
+	z-index: 2;
+	height: inherit;
+}
+#ajout_fichier h3
+{
+	left: 54px;
+	position: relative;
+	display: block;
+	bottom: 27px;
+	color: white;
+	z-index:1;
+}
+textarea
+{
+	width: 280px;
+	height: 250px;
+	border-radius: 20px;
+	border: 0px;
+}
+#ajout_parole label
+{
+	vertical-align: top;
+}
+#button
+{
+	width: 380px;
+	background-color: red;
+	border-radius: 20px;
+	height:40px;
+	margin-left: 300px;
+	border: 0px;
+	color: white;
+	font-family: 'Varela round', Sans Serif;
+	font-size: 16px;
+}
+#ajout_button
+{
+	display: block;
+	margin: auto;
+	width: 380px;
+	height: 40px;
+	opacity: 0;
+	z-index: 2;
+}
+#button h3
+{
+	display: block;
+	width: 200px;
+	margin: auto;
+	position: relative;
+	bottom: 27px;
+	color: white;
+	z-index: 1;
 }
